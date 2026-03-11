@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design System Audit — Obra shadcn/ui</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap');
+
+  :root {
+    --bg: #0a0a0b;
+    --surface: #111113;
+    --border: #1e1e22;
+    --border-bright: #2e2e35;
+    --text: #e8e8ec;
+    --text-muted: #5a5a68;
+    --text-dim: #8888a0;
+    --accent: #c8f064;
+    --accent-dim: rgba(200, 240, 100, 0.12);
+    --red: #ff4d6a;
+    --red-dim: rgba(255, 77, 106, 0.1);
+    --amber: #ffaa40;
+    --amber-dim: rgba(255, 170, 64, 0.1);
+    --green: #4dffaa;
+    --green-dim: rgba(77, 255, 170, 0.1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Mono', monospace;
+    min-height: 100vh;
+    padding: 48px 32px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* HEADER */
+  .header {
+    margin-bottom: 56px;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  .label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    color: var(--text-dim);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  /* SCORE HERO */
+  .score-hero {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 48px;
+    padding: 32px;
+    border: 1px solid var(--border-bright);
+    background: var(--surface);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeUp 0.6s ease 0.1s forwards;
+  }
+
+  .score-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--amber), transparent);
+  }
+
+  .score-number {
+    font-family: 'Syne', sans-serif;
+    font-size: 88px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--amber);
+    letter-spacing: -4px;
+  }
+
+  .score-meta {
+    padding-bottom: 8px;
+  }
+
+  .score-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--amber);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+  }
+
+  .score-desc {
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    max-width: 360px;
+  }
+
+  .score-watermark {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Syne', sans-serif;
+    font-size: 120px;
+    font-weight: 800;
+    color: rgba(255,170,64,0.04);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  /* SECTION */
+  .section-title {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* METRICS GRID */
+  .metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 48px;
+    background: var(--border);
+  }
+
+  .metric {
+    background: var(--surface);
+    padding: 24px;
+    opacity: 0;
+    animation: fadeUp 0.5s ease forwards;
+    cursor: default;
+    transition: background 0.2s;
+  }
+
+  .metric:hover { background: #16161a; }
+
+  .metric:nth-child(1) { animation-delay: 0.15s; }
+  .metric:nth-child(2) { animation-delay: 0.2s; }
+  .metric:nth-child(3) { animation-delay: 0.25s; }
+  .metric:nth-child(4) { animation-delay: 0.3s; }
+  .metric:nth-child(5) { animation-delay: 0.35s; }
+  .metric:nth-child(6) { animation-delay: 0.4s; }
+
+  .metric-name {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+  }
+
+  .metric-score-row {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .metric-value {
+    font-family: 'Syne', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .metric-denom {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .bar-track {
+    height: 3px;
+    background: var(--border-bright);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    width: 0%;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .metric-tag {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+
+  /* color variants */
+  .critical .metric-value { color: var(--red); }
+  .critical .bar-fill { background: var(--red); }
+  .critical .metric-tag { background: var(--red-dim); color: var(--red); }
+
+  .warning .metric-value { color: var(--amber); }
+  .warning .bar-fill { background: var(--amber); }
+  .warning .metric-tag { background: var(--amber-dim); color: var(--amber); }
+
+  .good .metric-value { color: var(--green); }
+  .good .bar-fill { background: var(--green); }
+  .good .metric-tag { background: var(--green-dim); color: var(--green); }
+
+  /* FINDINGS */
+  .findings {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 48px;
+  }
+
+  .finding {
+    background: var(--surface);
+    border-left: 2px solid transparent;
+    padding: 20px 24px;
+    opacity: 0;
+    animation: fadeUp 0.5s ease forwards;
+    transition: background 0.2s;
+  }
+
+  .finding:hover { background: #14141a; }
+
+  .finding.critical-f { border-color: var(--red); animation-delay: 0.45s; }
+  .finding.warning-f { border-color: var(--amber); animation-delay: 0.5s; }
+  .finding.good-f { border-color: var(--green); animation-delay: 0.55s; }
+
+  .finding-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .finding-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .finding.critical-f .finding-title { color: var(--red); }
+  .finding.warning-f .finding-title { color: var(--amber); }
+  .finding.good-f .finding-title { color: var(--green); }
+
+  .finding-score {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .finding-body {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.7;
+  }
+
+  /* NOTE */
+  .note {
+    background: var(--surface);
+    border: 1px solid var(--border-bright);
+    padding: 20px 24px;
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.7;
+    opacity: 0;
+    animation: fadeUp 0.5s ease 0.6s forwards;
+  }
+
+  .note strong { color: var(--accent); }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    opacity: 0;
+    animation: fadeUp 0.5s ease 0.7s forwards;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 600px) {
+    body { padding: 32px 20px; }
+    .metrics { grid-template-columns: 1fr; }
+    .score-number { font-size: 64px; }
+    .score-watermark { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <p class="label">Figma MCP — Design System Audit</p>
+  <h1>Obra shadcn/ui<br>Community File</h1>
+  <p class="subtitle">Audited via Figma Console MCP · southleft/figma-console-mcp</p>
+</header>
+
+<section class="score-hero">
+  <div class="score-number">66</div>
+  <div class="score-meta">
+    <div class="score-label">Needs Work</div>
+    <p class="score-desc">The system has strong coverage but is structurally fragile. Accessibility failures and incomplete token architecture are the primary blockers for production or enterprise use.</p>
+  </div>
+  <div class="score-watermark">/100</div>
+</section>
+
+<p class="section-title">Category Breakdown</p>
+<div class="metrics" id="metrics">
+
+  <div class="metric critical">
+    <div class="metric-name">Accessibility</div>
+    <div class="metric-score-row">
+      <span class="metric-value">35</span>
+      <span class="metric-denom">/ 100</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill" data-width="35"></div></div>
+    <span class="metric-tag">Critical</span>
+  </div>
+
+  <div class="metric warning">
+    <div class="metric-name">Token Architecture</div>
+    <div class="metric-score-row">
+      <span class="metric-value">65</span>
+      <span class="metric-denom">/ 100</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill" data-width="65"></div></div>
+    <span class="metric-tag">Needs Work</span>
+  </div>
+
+  <div class="metric warning">
+    <div class="metric-name">Component Metadata</div>
+    <div class="metric-score-row">
+      <span class="metric-value">64</span>
+      <span class="metric-denom">/ 100</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill" data-width="64"></div></div>
+    <span class="metric-tag">Needs Work</span>
+  </div>
+
+  <div class="metric warning">
+    <div class="metric-name">Naming & Semantics</div>
+    <div class="metric-score-row">
+      <span class="metric-value">75</span>
+      <span class="metric-denom">/ 100</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+    <span class="metric-tag">Moderate</span>
+  </div>
+
+  <div class="metric good">
+    <div class="metric-name">Consistency</div>
+    <div class="metric-score-row">
+      <span class="metric-value">70</span>
+      <span class="metric-denom">/ 100</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill" data-width="70"></div></div>
+    <span class="metric-tag">Acceptable</span>
+  </div>
+
+  <div class="metric good">
+    <div class="metric-name">Coverage</div>
+    <div class="metric-score-row">
+      <span class="metric-value">90</span>
+      <span class="metric-denom">/ 100</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
+    <span class="metric-tag">Strong</span>
+  </div>
+
+</div>
+
+<p class="section-title">Key Findings</p>
+<div class="findings">
+
+  <div class="finding critical-f">
+    <div class="finding-header">
+      <span class="finding-title">Accessibility — Enterprise Blocker</span>
+      <span class="finding-score">35 / 100</span>
+    </div>
+    <p class="finding-body">Missing contrast documentation, no focus state tokens, and likely absent semantic role annotations. For enterprise procurement cycles — Stripe, MetaMask, TripAdvisor — WCAG compliance is non-negotiable and will surface as a hard blocker in design system evaluation.</p>
+  </div>
+
+  <div class="finding warning-f">
+    <div class="finding-header">
+      <span class="finding-title">Token Architecture — AI Translation Risk</span>
+      <span class="finding-score">65 / 100</span>
+    </div>
+    <p class="finding-body">Tokens exist but are likely not fully aliased across primitive → semantic → component layers. For LLMNL's HTML/CSS-to-Figma translation layer, unstructured tokens force lossy decisions — directly undermining the core product's reliability.</p>
+  </div>
+
+  <div class="finding warning-f">
+    <div class="finding-header">
+      <span class="finding-title">Component Metadata — Machine Readability Gap</span>
+      <span class="finding-score">64 / 100</span>
+    </div>
+    <p class="finding-body">Missing descriptions, inconsistent prop naming, and absent usage guidance. This directly hurts AI readability — a systemic risk for any agentic pipeline that depends on components being interpretable without human curation.</p>
+  </div>
+
+  <div class="finding good-f">
+    <div class="finding-header">
+      <span class="finding-title">Coverage — Structural Foundation Exists</span>
+      <span class="finding-score">90 / 100</span>
+    </div>
+    <p class="finding-body">Components are present and the system is not sparse. Combined with 70/100 consistency, naming patterns are mostly coherent — the system has bones. The work is remediation, not rebuilding.</p>
+  </div>
+
+</div>
+
+<p class="section-title">Context Note</p>
+<div class="note">
+  <strong>This is a community file</strong> (Obra shadcn/ui), not a proprietary design system. The strategic question is: is this being used as a reference UI for LLMNL's own product, a client test case for the standardization workflow, or a competitive benchmark? That context determines whether fixing it is a product demo opportunity or a baseline exercise.
+</div>
+
+<footer class="footer">
+  <span>LLMNL Labs · Design System Audit</span>
+  <span id="date"></span>
+</footer>
+
+<script>
+  document.getElementById('date').textContent = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+  // Animate bars after load
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelectorAll('.bar-fill').forEach(bar => {
+        bar.style.width = bar.dataset.width + '%';
+      });
+    }, 400);
+  });
+</script>
+
+</body>
+</html>
