@@ -5,7 +5,7 @@ type: knowledge
 
 # Adoption measurement principles
 
-**Knowledge note for Design System Ops**
+**Knowledge note for Claude Design System**
 **Auto-loaded by:** adoption-report
 
 ---
