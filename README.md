@@ -168,12 +168,6 @@ Setup details in [1-INSTALL.md](1-INSTALL.md#setting-up-figma-integration).
 
 ---
 
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).
-
----
-
 ## License
 
 MIT — see [LICENSE](LICENSE).
