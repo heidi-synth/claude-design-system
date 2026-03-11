@@ -5,7 +5,7 @@ type: knowledge
 
 # Token architecture principles
 
-**Knowledge note for Design System Ops**
+**Knowledge note for Claude Design System**
 **Auto-loaded by:** token-audit, token-documentation, token-compliance, drift-detection
 
 ---
