@@ -5,7 +5,7 @@ type: knowledge
 
 # Agent orchestration guide
 
-**Knowledge note for Design System Ops**
+**Knowledge note for Claude Design System**
 **Auto-loaded by:** system-health, governance-encoder, context-engine-builder
 
 ---
