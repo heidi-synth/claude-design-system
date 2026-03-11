@@ -5,7 +5,7 @@ type: knowledge
 
 # MCP setup guide
 
-**Knowledge note for Design System Ops**
+**Knowledge note for Claude Design System**
 **Auto-loaded by:** ai-component-description, context-engine-builder, system-health
 
 ---
