@@ -5,7 +5,7 @@ type: knowledge
 
 # Component Bestiary reference
 
-**Knowledge note for Design System Ops**
+**Knowledge note for Claude Design System**
 **Auto-loaded by:** pattern-documentation, usage-guidelines, ai-component-description, component-audit
 
 ---
