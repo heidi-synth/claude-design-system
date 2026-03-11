@@ -1,6 +1,4 @@
-# Installing Design System Ops
-
-[designsystemops.com](https://designsystemops.com)
+# Installing Claude Design System
 
 ## Quick start (2 minutes)
 
@@ -13,11 +11,11 @@
 **In Claude Code (terminal):**
 1. Clone the repo directly into your skills directory:
    ```bash
-   git clone https://github.com/murphytrueman/design-system-ops.git ~/.claude/skills/design-system-ops
+   git clone https://github.com/heidi-synth/claude-design-system.git ~/.claude/skills/design-system-ops
    ```
    For project-level installation instead of global:
    ```bash
-   git clone https://github.com/murphytrueman/design-system-ops.git your-project/.claude/skills/design-system-ops
+   git clone https://github.com/heidi-synth/claude-design-system.git your-project/.claude/skills/design-system-ops
    ```
 2. Open Claude Code and try: "How healthy is my design system?"
 3. If Claude responds with a structured, multi-step process — not generic advice — you're set up
@@ -440,15 +438,11 @@ Your project-level config is not inside the skill pack, so it's never overwritte
 | `skills/` | 37 skill files organised by name, each with a `SKILL.md` and `references/` |
 | `commands/` | 13 command definitions for agent workflows and shortcuts |
 | `knowledge-notes/` | 10 canonical reference documents that power the skills |
-| `sample-outputs/` | Real skill outputs showing expected depth and format |
 | `.ds-ops-config.yml` | Annotated configuration template |
 | `installable/` | Pre-packaged `.plugin` (Cowork) and `.zip` for quick installation |
 | `1-INSTALL.md` | This file |
 | `2-WHATS-INCLUDED.md` | Full product documentation — skills, agents, knowledge notes |
 | `3-SETUP-AND-CONFIG.md` | Deep-dive setup guide with framework compatibility, monorepo handling, troubleshooting |
-| `CONTRIBUTING.md` | How to contribute |
 | `LICENSE` | MIT license |
 
----
 
-If you found this useful, [buy me a coffee](https://buymeacoffee.com/murphytrueman).
