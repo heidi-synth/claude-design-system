@@ -1,8 +1,8 @@
-# Design System Ops — Setup and configuration guide
+# Claude Design System — Setup and configuration guide
 
 **Version:** 1.1
 **Last updated:** 2026-03-08
-**Maintainer:** Murphy Trueman · [designsystemops.com](https://designsystemops.com)
+**Maintainer:** Heidi Hayashitani
 
 This document is the single source of truth for installing, configuring, and getting value from Design System Ops. Update it whenever the product changes.
 
@@ -24,7 +24,7 @@ Before installing, make sure you have:
 Clone the repo directly into your Claude Code skills directory. The `~` symbol means your home folder (for example, `/Users/yourname/` on Mac or `/home/yourname/` on Linux):
 
 ```bash
-git clone https://github.com/murphytrueman/design-system-ops.git ~/.claude/skills/design-system-ops
+git clone https://github.com/heidi-synth/claude-design-system.git ~/.claude/skills/design-system-ops
 ```
 
 **What this means in plain terms:** This creates the `design-system-ops` folder inside the hidden `.claude/skills/` directory in your home folder. The `.claude` folder starts with a dot, so it may be hidden in your file browser — on Mac, press `Cmd+Shift+.` to show hidden files.
@@ -32,13 +32,13 @@ git clone https://github.com/murphytrueman/design-system-ops.git ~/.claude/skill
 If you only want the skills available for one specific project (not globally):
 
 ```bash
-git clone https://github.com/murphytrueman/design-system-ops.git your-project/.claude/skills/design-system-ops
+git clone https://github.com/heidi-synth/claude-design-system.git your-project/.claude/skills/design-system-ops
 ```
 
 **Example:** If your project is at `~/projects/my-design-system`, the command would be:
 
 ```bash
-git clone https://github.com/murphytrueman/design-system-ops.git ~/projects/my-design-system/.claude/skills/design-system-ops
+git clone https://github.com/heidi-synth/claude-design-system.git ~/projects/my-design-system/.claude/skills/design-system-ops
 ```
 
 After cloning, the directory structure should look like:
@@ -805,6 +805,3 @@ This section tracks every change to the product. Update it with every modificati
 10. **This setup guide**
     - Created `3-SETUP-AND-CONFIG.md` as the single source of truth for installation, configuration, integrations, and troubleshooting
 
----
-
-If you found this useful, [buy me a coffee](https://buymeacoffee.com/murphytrueman).
