@@ -2,7 +2,7 @@
 
 **A Claude Code skill pack for the designers who build the systems everyone else uses.**
 
-Murphy Trueman · 2026 · [designsystemops.com](https://designsystemops.com)
+Heidi Hayashitani ✦ 2026 
 
 ---
 
