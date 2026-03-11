@@ -110,7 +110,9 @@ The skills encode specific design system expert frameworks:
 - **Design system maturity model** — five levels from ad-hoc to optimised, used across health reports, stakeholder briefs, and adoption tracking to frame recommendations appropriately
 - **AI-readiness scoring** — evaluates how well your system's metadata, naming, and structure support AI agent consumption
 
+
 ---
+
 
 ## Quick examples
 
@@ -128,6 +130,12 @@ Tip: You don't need to memorize skill names. Describe what you need and the righ
 **"How do I communicate the value design systems offer?"**
 → Say: "Write a stakeholder brief for leadership about our design system and it's objective value"
 
+
+---
+## Example outputs
+
+[Health Dashboard](sample-outputs/example-health-dashboard.html)
+[System Audit](sample-outputs/example-system-audit.md)
 
 ---
 
