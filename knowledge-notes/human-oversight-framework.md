@@ -5,7 +5,7 @@ type: knowledge
 
 # Human oversight framework
 
-**Knowledge note for Design System Ops**
+**Knowledge note for Claude Design System**
 **Auto-loaded by:** governance-encoder, system-health
 
 ---
