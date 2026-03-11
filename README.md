@@ -1,29 +1,47 @@
-# Design System Ops
+# Claude Design System
 
-![Design System Ops](og-image.png)
 
-Claude Code skills for the work that keeps a design system alive.
-
-[designsystemops.com](https://designsystemops.com)
+Claude Code skills for the work that keeps a design system alive (and in use!!).
 
 ---
 
-## The work nobody built AI for
+## Design tooling built by a designer, for designers
 
-Design systems drift. Tokens go stale. Components fall out of spec. Governance documentation gets written once and never updated. The deprecation plan lives in someone's head. The stakeholder brief gets thrown together the night before quarterly review.
-There are great AI tools for the designer who uses a design system. But the team running it? That work never had proper tooling – until now.
+# The Drift
+
+Tokens go stale.
+Components fork in the dark.
+The governance doc yellows at the edges.
+The deprecation plan lived in Marcus's head,
+But Marcus left in 2022.
+There are tools for the designers,
+the ones who consume, drag, drop, and ship.
+But the keepers of the system?
+They had spreadsheets, and Storybooks, Notion pages no one read.
+But now, they have code agents who can help them do the work.
+So, roll up the sleeves on your shirt.
+Open that iTerm, and smash that bash.
+Things are moving fast and it's a mad dash.
 
 ---
 
-## What this is
+## What this is?
 
-A skill pack for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Cowork](https://claude.ai) that teaches Claude how to do design systems work the way a staff-level practitioner would — with structured processes, expert frameworks, and output calibrated to the actual complexity of what you're dealing with.
+A pack of skills for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Cowork](https://claude.ai) that teaches Claude how to do design systems work the way a staff-level designer would. A harness with structured processes, expert frameworks, and output calibrated to the work enterprise designers do every day.
 
-When you ask Claude to audit your tokens, it doesn't give you generic advice. It reads your actual token files, identifies tier leakage, flags naming violations, produces a prioritised finding table with remediation guidance, and — if you're migrating to DTCG — gives you a sprint-plannable migration plan with hour estimates.
+This isn't a smarter prompt. 
+It's a different kind of output.
 
-That is the difference. Not a smarter prompt. A different kind of output entirely.
+Ask Claude to audit your tokens (it reads your actual files). Flags naming violations. Identifies tier inconsistencies or drift. 
+If you're migrating to DTCG, it hands you a sprint-ready plan with hour estimates, not a doc you have to interpret.
 
-**Who it's for:** Design systems leads, senior design engineers, and anyone responsible for a production design system. The people who run the system, not just the people who use it.
+This is what proper DS tooling looks like.
+
+This collection of skills is a combination of skills I have written myself, as well other helpful skills I have found around the internet. 
+All skills have been tested for maliciousness (to the best of my ability I am not a securities engineer).
+
+**Who it's for:** Anyone who is responsible for a production design system. The DS leads, the UI Frameworks engineers. The people who build and maintain the machine. 
+This is not for UI/UX designers who are consumers of the DS.
 
 ---
 
@@ -41,22 +59,22 @@ That is the difference. Not a smarter prompt. A different kind of output entirel
 Clone this repo into your Claude Code skills directory:
 
 ```bash
-git clone https://github.com/murphytrueman/design-system-ops.git ~/.claude/skills/design-system-ops
+git clone https://github.com/heidi-synth/claude-design-system.git ~/.claude/skills/design-system-ops
 ```
 
 For project-level installation (instead of global):
 
 ```bash
-git clone https://github.com/murphytrueman/design-system-ops.git your-project/.claude/skills/design-system-ops
+git clone https://github.com/heidi-synth/claude-design-system.git your-project/.claude/skills/design-system-ops
 ```
 
-**Verify:** Open Claude Code and say "How healthy is my design system?" If Claude responds with a structured, multi-step process — not generic advice — you're set up.
+**Verify:** Open Claude Code and say "Is my design system healthy?" If Claude responds with a structured, multi-step process to nurse it back to health, you're good to go.
 
 See [1-INSTALL.md](1-INSTALL.md) for the full guide with entry points by use case.
 
 ---
 
-## What's included
+## What's inside
 
 ### Skills
 
@@ -85,7 +103,7 @@ Five skills produce machine-readable files that AI agents and tooling consume di
 
 ## Core frameworks
 
-The skills encode specific practitioner frameworks, not generic advice:
+The skills encode specific design system expert frameworks:
 
 - **Three-tier token architecture** — primitive → semantic → component, with tier-leakage detection and DTCG 2025.10 alignment
 - **Component Challenge Rating** — a difficulty classification system that calibrates audit depth and remediation estimates to actual component complexity
@@ -96,22 +114,20 @@ The skills encode specific practitioner frameworks, not generic advice:
 
 ## Quick examples
 
-**"I just want to know where we stand"**
+Tip: You don't need to memorize skill names. Describe what you need and the right skill will activate!
+
+**"I need to sunset or deprecate a component or component set"**
+→ Say: "Deprecate ToggleBig and ToggleDefault in favor of Toggle"
+
+**"I don't know the objective state of my ds"**
 → Say: "How healthy is my design system?"
 
-**"Our tokens are a mess"**
-→ Say: "Audit my tokens"
+**"Our tokens are a disaster"**
+→ Say: "Audit my design system tokens"
 
-**"I need to deprecate a component"**
-→ Say: "Help me deprecate DatePicker in favour of DatePickerNext"
+**"How do I communicate the value design systems offer?"**
+→ Say: "Write a stakeholder brief for leadership about our design system and it's objective value"
 
-**"I need to convince leadership"**
-→ Say: "Write a stakeholder brief for leadership about our design system"
-
-**"Run the full pre-release pipeline"**
-→ Say: "Run the release pipeline for Dialog"
-
-You don't need to memorise skill names. Describe what you need and the right skill activates.
 
 ---
 
@@ -174,14 +190,10 @@ MIT — see [LICENSE](LICENSE).
 
 ---
 
-## Support
-
-If you found this useful, [buy me a coffee](https://buymeacoffee.com/murphytrueman).
-
----
 
 ## Author
 
-**Murphy Trueman** — [designsystemops.com](https://designsystemops.com) · [hello@murphytrueman.com](mailto:hello@murphytrueman.com)
+**Heidi Hayashitani** — (mailto:heidihayashitani@gmail.com)
+Additional contributions from people around the internet. 
+I was messy in how I collected things and cannot attribute by name, however; I thank you!
 
-Built from 14 years of production design systems work. If it's in these skills, it's because it came up in real work.
