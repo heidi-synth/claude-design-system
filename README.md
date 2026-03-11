@@ -131,16 +131,6 @@ Tip: You don't need to memorize skill names. Describe what you need and the righ
 
 ---
 
-## Sample outputs
-
-Real outputs from real codebases are in [`sample-outputs/`](sample-outputs/):
-
-- **[example-token-audit.md](sample-outputs/example-token-audit.md)** — A complete audit of a ~480 token system: 11 findings across Critical/High/Medium/Low, specific code examples, DTCG alignment assessment, and a prioritised remediation roadmap.
-- **[example-component-description.md](sample-outputs/example-component-description.md)** — A six-section MCP description for a React Dialog component: ~620 words of structured plain text for Figma.
-- **[example-health-dashboard.html](sample-outputs/example-health-dashboard.html)** — An interactive HTML dashboard generated from audit findings: health radar, severity distribution, priority matrix, metric cards. Open in any browser.
-
----
-
 ## Configuration
 
 Every skill works out of the box with no configuration. If you want to customise behaviour — severity overrides, Figma integration, GitHub API access, recurring trend tracking — create a `.ds-ops-config.yml` in your project root. An annotated template is included in the skill pack.
