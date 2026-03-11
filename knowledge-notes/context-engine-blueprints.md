@@ -5,7 +5,7 @@ type: knowledge
 
 # Context engine blueprint templates
 
-**Knowledge note for Design System Ops**
+**Knowledge note for Claude Design System**
 **Auto-loaded by:** context-engine-builder
 
 ---
