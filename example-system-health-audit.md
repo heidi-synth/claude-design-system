@@ -1,0 +1,8 @@
+![shadcn-design-system-report 4 001](https://github.com/user-attachments/assets/befdd9a9-61ea-4f7e-b776-afe1a5468ccb)
+![shadcn-design-system-report 4 002](https://github.com/user-attachments/assets/dde25eeb-3f7b-41f4-84f4-a74f74d39a55)
+![shadcn-design-system-report 4 003](https://github.com/user-attachments/assets/5f6fc00e-3732-42b8-ada7-bc5cdd57e291)
+![shadcn-design-system-report 4 004](https://github.com/user-attachments/assets/380277e9-2308-4011-ad88-e3f68d8e61b1)
+![shadcn-design-system-report 4 005](https://github.com/user-attachments/assets/18f17a9d-6f50-4317-8b75-79d7830bc66f)
+![shadcn-design-system-report 4 006](https://github.com/user-attachments/assets/331cc4b8-935c-4d9f-81c9-d3d71b9725ed)
+![shadcn-design-system-report 4 007](https://github.com/user-attachments/assets/0cd5044b-8fce-4bc7-ae73-b05cf68b7e83)
+![shadcn-design-system-report 4 008](https://github.com/user-attachments/assets/e2c6c059-fca9-456c-af1e-290039052ffd)
