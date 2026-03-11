@@ -14,7 +14,7 @@ type: knowledge
 
 The Component Bestiary (thecomponentbestiary.com) catalogues UI components as D&D-style creatures, with Challenge Ratings (CR) assigned based on implementation danger rather than visual complexity. A component with a high Challenge Rating is not necessarily large or visually complex — it is dangerous to implement incorrectly, with proportional consequences for users and the system when it goes wrong.
 
-The Bestiary is referenced by Design System Ops as a signal system for documentation and validation priorities. High-CR components need more rigorous usage guidelines, more thorough accessibility audits, and more explicit anti-patterns, because the cost of getting them wrong is higher.
+The Bestiary is referenced by Claude Design System as a signal system for documentation and validation priorities. High-CR components need more rigorous usage guidelines, more thorough accessibility audits, and more explicit anti-patterns, because the cost of getting them wrong is higher.
 
 ---
 
