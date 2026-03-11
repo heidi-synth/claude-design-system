@@ -5,7 +5,7 @@ type: knowledge
 
 # Component governance frameworks
 
-**Knowledge note for Design System Ops**
+**Knowledge note for Claude Design System**
 **Auto-loaded by:** contribution-workflow, deprecation-process, decision-record, component-audit, system-health
 
 ---
