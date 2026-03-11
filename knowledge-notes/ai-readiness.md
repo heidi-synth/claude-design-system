@@ -5,7 +5,7 @@ type: knowledge
 
 # AI-readiness patterns
 
-**Knowledge note for Design System Ops**
+**Knowledge note for Claude Design System**
 **Auto-loaded by:** ai-component-description, pattern-documentation, usage-guidelines, system-health
 
 ---
