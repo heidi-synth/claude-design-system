@@ -5,7 +5,7 @@ type: knowledge
 
 # Output discipline
 
-**Knowledge note for Design System Ops**
+**Knowledge note for Claude Design System**
 **Auto-loaded by:** All audit, validate, and assessment skills
 
 ---
