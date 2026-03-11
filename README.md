@@ -136,6 +136,7 @@ Tip: You don't need to memorize skill names. Describe what you need and the righ
 
 [Health Dashboard](sample-outputs/example-health-dashboard.html)
 [System Audit](sample-outputs/example-system-audit.md)
+[Health Audit](sample-outputs/example-health-audit.md)
 
 ---
 
