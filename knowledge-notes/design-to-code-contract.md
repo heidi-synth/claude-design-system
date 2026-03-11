@@ -5,7 +5,7 @@ type: knowledge
 
 # Design-to-code contract definitions
 
-**Knowledge note for Design System Ops**
+**Knowledge note for Claude Design System**
 **Auto-loaded by:** design-to-code-check, contribution-workflow, drift-detection, system-health
 
 ---
