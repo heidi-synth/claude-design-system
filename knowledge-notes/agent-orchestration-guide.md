@@ -222,9 +222,9 @@ Multi-agent workflows fail. The orchestration layer must handle failures gracefu
 
 ---
 
-## Orchestration in Design System Ops
+## Orchestration in Claude Design System
 
-The Design System Ops product organises orchestration through agent chains — predefined sequences of skills that execute as a coordinated workflow.
+The Claude Design System product organises orchestration through agent chains — predefined sequences of skills that execute as a coordinated workflow.
 
 ### Existing agent chains
 
